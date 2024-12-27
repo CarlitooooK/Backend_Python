@@ -10,6 +10,8 @@ class User(BaseModel):
     url:str
     age:int
 
+
+#Agregar Usuarios a la Clase
 users_list = [
     User(id = 1,name = "Celeste",surname="Cobix",url="Te amo",age=20),
     User(id = 2,name = "Carlo",surname="Cabrera",url="Amo a mi novia",age=20),
@@ -37,6 +39,7 @@ async def user(id: int):
     return search_user(id)
 
 
+#FUNCION para evaluar los ids
 def search_user(id:int):
     users = filter(lambda user: user.id == id, users_list)
     try:
